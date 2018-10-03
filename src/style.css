@@ -1,11 +1,23 @@
-section{
-  margin: 70px;
-}
 body {
   background-color: #082d4d;
+}
+#registro{
+  background-color: #F2F2ED;
+}
+
+section{
+  border-radius: 10px;
+  margin: 70px;
 }
 
 select {
   display: table;
 }
+.slider{
+  margin: 20px;
+}
+.btn{
+  margin: 10px;
+}
 /* 082d4d */
+/* F5F5EF */
