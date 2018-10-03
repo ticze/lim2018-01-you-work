@@ -7,7 +7,6 @@ btnRegister.addEventListener('click', () => {
   const cellPhone = document.getElementById('celular').value;
   const slcVisitante = document.getElementById('slc_vst').value;
   const visitDate = new Date().toLocaleString();
-  console.log(name, dni, cellPhone,slcVisitante, visitDate)
   
   const admVisitantes = firebase.database().ref().child('visitante');
   admVisitantes.push({

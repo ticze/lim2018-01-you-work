@@ -1,17 +1,22 @@
 body {
-  background-color: #082d4d;
+  background-color: #256F5C;
 }
-#registro{
-  background-color: #F2F2ED;
+h2{
+  font-family: 'K2D', sans-serif;
+  color: #8FBB4B;
 }
-
+label{
+  font-family: 'K2D', sans-serif;
+}
 section{
   border-radius: 10px;
   margin: 70px;
 }
-
 select {
   display: table;
+}
+#registro{
+  background-color: #F2F2ED;
 }
 .slider{
   margin: 20px;
