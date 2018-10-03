@@ -1,7 +1,11 @@
 #registro{
   margin: 70px;
 }
+body {
+  background-color: #082d4d;
+}
 
 select {
   display: table;
 }
+/* 082d4d */
