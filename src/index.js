@@ -5,7 +5,7 @@ btnRegister.addEventListener('click', () => {
   const name = document.getElementById('nombres').value;
   const dni = document.getElementById('dni').value;
   const cellPhone = document.getElementById('celular').value;
-  const slcVisitante = document.getElementById('slc-vst').value;
+  const slcVisitante = document.getElementById('slc_vst').value;
   const visitDate = new Date().toLocaleString();
   console.log(name, dni, cellPhone,slcVisitante, visitDate)
   
