@@ -16,62 +16,46 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col s6">
-        <form method="get">
-          <h2>REGISTRATE</h2>
-          <div></div>
-          <input type="text" name="nombres" placeholder="Nombre Completo">
-          <input type="number" name="dni" placeholder="Número de Identifcación">
-          <input type="number" name="celular" placeholder="Celular">
-          <span>A quien desea visitar?</span>
-          <select name="persona" id="persona">
-            <option value="1">Leyla ticze</option>
-          </select>
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
-      <div class="col s6">
-        <div class="slider">
-          <ul class="slides">
-            <li>
-              <img src="https://lorempixel.com/580/250/nature/1">
-              <!-- random image -->
-              <div class="caption center-align">
-                <h3>This is our big Tagline!</h3>
-                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-              </div>
-            </li>
-            <li>
-              <img src="https://lorempixel.com/580/250/nature/2">
-              <!-- random image -->
-              <div class="caption left-align">
-                <h3>Left Aligned Caption</h3>
-                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-              </div>
-            </li>
-            <li>
-              <img src="https://lorempixel.com/580/250/nature/3">
-              <!-- random image -->
-              <div class="caption right-align">
-                <h3>Right Aligned Caption</h3>
-                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-              </div>
-            </li>
-            <li>
-              <img src="https://lorempixel.com/580/250/nature/4">
-              <!-- random image -->
-              <div class="caption center-align">
-                <h3>This is our big Tagline!</h3>
-                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-              </div>
-            </li>
-          </ul>
+  <section id="registro">
+    <div class="container">
+      <div class="row">
+        <div class="col s6">
+          <form method="get">
+            <h2>REGISTRATE</h2>
+            <div></div>
+            <input type="text" name="nombres" placeholder="Nombre Completo">
+            <input type="number" name="dni" placeholder="Número de Identifcación">
+            <input type="number" name="celular" placeholder="Celular">
+            <span>A quien desea visitar?</span>
+            <select name="persona" id="persona">
+              <option selected>Seleccione</option>
+              <option value="1">Leyla ticze</option>
+            </select>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+        <div class="col s6">
+          <div class="slider">
+            <ul class="slides">
+              <li>
+                <img src="../img/re ce.jpg">
+              </li>
+              <li>
+                <img src="../img/Recepcion-del-hotel.jpg">
+              </li>
+              <li>
+                <img src="../img/recepcion.jpg">
+              </li>
+              <li>
+                <img src="../img/wewor2.jpg">
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
