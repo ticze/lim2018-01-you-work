@@ -11,7 +11,7 @@ window.sendEmail = (visitanteDatos) => {
                 </div>`,
                 "text": "contactate con nosotros: 987654321",
                 "subject": "Visita Nueva",
-                "from_email": "l.tiicze@laboratoria.la",
+                "from_email": "l.ticze@laboratoria.la",
                 "from_name": "Comunal coworking",
                 "to": [
                     {
