@@ -1,16 +1,19 @@
-const registrar = () => {
+const crear = document.getElementById('crear');
+const ingresar = document.getElementById('ingresar');
+crear.addEventListener('click', () => {
+  event.preventDefault();
   const email = document.getElementById('email').value;
   const contrasena = document.getElementById('contrasena').value;
-
   firebase.auth().createUserWithEmailAndPassword(email, contrasena)
-      .catch(function (error) {
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          console.log(errorMessage)
-      });
+    .catch(function (error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorMessage)
+    });
 
-}
-const ingresar = () => {
+})
+ingresar.addEventListener('click', () => {
+  event.preventDefault();
   const email2 = document.getElementById('email2').value;
   const contrasena2 = document.getElementById('contrasena2').value;
   firebase.auth().signInWithEmailAndPassword(email2, contrasena2)
@@ -20,8 +23,7 @@ const ingresar = () => {
       var errorMessage = error.message;
       console.log(errorMessage)
     });
-
-}
+})
 const observador = () => {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
@@ -44,33 +46,22 @@ const observador = () => {
 observador()
 
 const dtVisitante = () => {
+  console.log('ingreso')
   const contenido = document.getElementById('contenido');
   let ref = firebase.database().ref('/visitante');
-    ref.once('value', (data) => {
-      data.forEach(visitante => {
-        let visitor = visitante.key,
-          visitanteDatos = visitante.val();
-          contenido.innerHTML = ` 
-          <thead>
-          <tr>
-              <th>Nombre</th>
-              <th>Núm. de Identidad</th>
-              <th>Celular</th>
-              <th>Persona Visitada</th>
-              <th>Hora/Fecha</th>
-          </tr>
-        </thead>
-      
-        <tbody>
-          <tr>
+  ref.once('value', (data) => {
+    data.forEach(visitante => {
+      let visitor = visitante.key,
+        visitanteDatos = visitante.val();
+      contenido.innerHTML = `
+          <tr data-key="${visitor}">
             <td>${visitanteDatos.name}</td>
             <td>${visitanteDatos.dni}</td>
             <td>${visitanteDatos.cell}</td>
             <td>${visitanteDatos.persona_a_visitar}</td>
             <td>${visitanteDatos.fecha_de_visita}</td>
           </tr>
-        </tbody>
         `
-      })
-    });
+    })
+  });
 }

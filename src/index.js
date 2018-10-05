@@ -16,50 +16,45 @@ btnRegister.addEventListener('click', () => {
     persona_a_visitar: slcVisitante,
     fecha_de_visita: visitDate,
   })
-
-  const sendEmail = () => {
-    let ref = firebase.database().ref('/visitante');
-    ref.once('value', (data) => {
-      data.forEach(visitante => {
-        let visitor = visitante.key,
-          visitanteDatos = visitante.val();
-        // console.log(visitanteDatos)
-        return visitanteDatos;
-      })
-    });
-  }
 })
 
-window.envio = (datos)=>{
-  const data = {
-    "personalizations": [
-      {
-        "to": [
-          {
-            "email": datos.persona_a_visitar ,
+window.sendEmail = () => {
+  let ref = firebase.database().ref('/visitante');
+  ref.once('value', (data) => {
+    data.forEach(visitante => {
+      let visitor = visitante.key,
+        visitanteDatos = visitante.val();
+      const data = {
+        key: 'ZGiSDAUGJIgaCMIqm9ysPA',
+        message: {
+          html: `<div>
+                  <span>Hola!!! ${visitanteDatos.persona_a_visitar} , ${visitanteDatos.name},connumero de DNI ${visitanteDatos.dni} te esta esperando en recepción,
+                  comunicate con nosotros para confirmar su ingreso o al ${visitanteDatos.cell} de la persona.</span></div>`,
+          'text': 'contactate con nosotros: 987654321',
+          'subject': 'Visita Nueva',
+          'from_email': 'l.ticze@laboratoria.la',
+          'from_name': 'Comunal coworking',
+          'to': [
+            {
+              'email': visitanteDatos.persona_a_visitar,
+              'name': visitanteDatos.persona_a_visitar,
+              'type': 'to'
+            }
+          ],
+          'headers': {
+            'Reply-To': 'l.ticze@laboratoria.la'
           }
-        ],
-        "subject": "Hola, =)"
-      }
-    ],
-    "from": {
-      "email": "luis@laboratoria.la"
-    },
-    "content": [
-      {
-        "type": "text/plain",
-        "value": "Ves que si funciona!"
-      }
-    ]
-  }
-  
-  fetch('https://api.sendgrid.com/v3/mail/send', {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json; charset=utf-8",
-      "Authorization": "Bearer [TU-SENDGRID-API-KEY]"
-    },
-    body: JSON.stringify(data), // body data type must match "Content-Type" header
+        }
+      };
+      return JSON.stringify(data);
+    })
   })
-  .then(response => response.json())
-}
+};
+
+window.emailMandrill = (data) => {
+  $.ajax({
+    type: 'POST',
+    url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+    data
+  });
+};
