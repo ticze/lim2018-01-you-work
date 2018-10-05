@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -17,22 +17,20 @@
 </head>
 
 <body>
-
-  <div class="navbar-fixed">
-    <nav class="adm">
-      <div class="nav-wrapper">
-        <ul class="right hide-on-med-and-down">
-          <li>
-            <a href="../src/administracion.html" class="waves-effect waves-light btn">Administrador
-              <i class="material-icons right">assignment_ind</i>
-            </a>
-          </li>
-        </ul>
+    <div class="navbar-fixed">
+        <nav class="adm">
+          <div class="nav-wrapper">
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a href="../src/index.html" class="waves-effect waves-light btn">Regresar
+                  <i class="material-icons right">cached</i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-    </nav>
-  </div>
-
-  <section id="registro">
+  <section id="login">
     <div class="container">
       <div class="row">
         <form method="get" class="col s12">
@@ -40,45 +38,41 @@
             <h2 class="center-align">REGíSTRATE</h2>
             <div class="input-field col s12">
               <input id="nombres" type="text" class="validate">
-              <label for="nombres">NOMBRE COMPLETO</label>
+              <label for="nombres">CORREO ELECTROICO</label>
             </div>
             <div class="input-field col s12">
               <input id="dni" type="number" class="validate">
-              <label for="dni">NÚMERO DE IDENTIFICACIÓN</label>
+              <label for="dni">CONTRASEÑA</label>
             </div>
-            <div class="input-field col s12">
-              <input id="celular" type="number" class="validate">
-              <label for="celular">CELULAR</label>
-            </div>
-            <label> A QUIÉN DESEA VISITAR?</label>
-            <select class="browser-default" id="slc_vst">
-              <option value="" disabled selected>Seleccione</option>
-              <option value="ticze2598@gmail.com">Leyla Ticze</option>
-            </select>
-            <button id="btn-for" class="btn waves-effect waves-light" type="submit" name="action">Enviar
+            <button id="btn-for" class="btn waves-effect waves-light" type="submit" name="action">Registrarse
               <i class="material-icons right">send</i>
             </button>
           </div>
         </form>
-        <!-- <div class="col s6">
-          <div class="slider">
-            <ul class="slides">
-              <li>
-                <img src="../img/re ce.jpg">
-              </li>
-              <li>
-                <img src="../img/recepcion.jpg">
-              </li>
-              <li>
-                <img src="../img/wewor2.jpg">
-              </li>
-            </ul>
-          </div>
-        </div> -->
       </div>
     </div>
   </section>
+  <!-- <table class="striped responsive-table">
+      <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Núm. de Identidad</th>
+            <th>Celular</th>
+            <th>Persona Visitada</th>
+            <th>Hora/Fecha</th>
+        </tr>
+      </thead>
 
+      <tbody>
+        <tr>
+          <td>Alvin</td>
+          <td>Eclair</td>
+          <td>$0.87</td>
+          <td>fddgfdg</td>
+          <td>hgjhjhjb</td>
+        </tr>
+      </tbody>
+    </table> -->
 
   <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
   <script src="call-firebase.js"></script>

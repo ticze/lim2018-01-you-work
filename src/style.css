@@ -12,6 +12,9 @@ section{
   border-radius: 10px;
   margin: 70px;
 }
+.adm{
+  background-color: #F2F2ED;
+}
 select {
   display: table;
 }
