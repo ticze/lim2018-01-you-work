@@ -6,8 +6,8 @@ window.sendEmail = (visitanteDatos) => {
             'key': 'ZGiSDAUGJIgaCMIqm9ysPA',
             'message': {
                 "html": `<div>
-                <span>Hola!!! ${visitanteDatos.persona_a_visitar} , ${visitanteDatos.name},connumero de DNI ${visitanteDatos.dni} te esta esperando en recepción,
-                comunicate con nosotros para confirmar su ingreso o al ${visitanteDatos.cell} de la persona.</span>
+                <span>Hola!!! ${visitanteDatos.persona_a_visitar} , ${visitanteDatos.name},con numero de DNI ${visitanteDatos.dni} te esta esperando en recepción,
+                comunicate con nosotros para confirmar su ingreso o al numero ${visitanteDatos.cell} de la persona.</span>
                 </div>`,
                 "text": "contactate con nosotros: 987654321",
                 "subject": "Visita Nueva",
