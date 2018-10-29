@@ -53,7 +53,7 @@ const dtVisitante = () => {
     data.forEach(visitante => {
       let visitor = visitante.key,
         visitanteDatos = visitante.val();
-      contenido.innerHTML = `
+      contenido.innerHTML += `
           <tr data-key="${visitor}">
             <td>${visitanteDatos.name}</td>
             <td>${visitanteDatos.dni}</td>

@@ -1,5 +1,4 @@
 const btnRegister = document.getElementById('btn-for');
-
 btnRegister.addEventListener('click', () => {
   event.preventDefault();
   const name = document.getElementById('nombres').value;
@@ -16,12 +15,5 @@ btnRegister.addEventListener('click', () => {
     persona_a_visitar: slcVisitante,
     fecha_de_visita: visitDate,
   })
-  let ref = firebase.database().ref('/visitante');
-  ref.once('value', (data) => {
-    data.forEach(visitante => {
-      let visitor = visitante.key,
-        visitanteDatos = visitante.val();
-      sendEmail(visitanteDatos);
-    })
-  })
-})
+  sendEmail(name,dni,cellPhone,slcVisitante,visitDate);
+});
