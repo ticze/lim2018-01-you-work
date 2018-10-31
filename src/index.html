@@ -35,7 +35,7 @@
   <section id="registro">
     <div class="container">
       <div class="row">
-        <form method="get" class="col s12">
+        <form method="get" class="col s12" id="infoDate">
           <div class="row">
             <h2 class="center-align">REGíSTRATE</h2>
             <div class="input-field col s12">
@@ -56,9 +56,15 @@
               <option value="l.ticze@gmail.com">Leyla Ticze</option>
               <option value="gutierrezanicamalucero@gmail.com">Grecia Gutierrez</option>
             </select>
-            <button id="btn-for" class="btn waves-effect waves-light" type="submit" name="action">Enviar
+            <button id="btn-for" data-target="modal1" class="btn modal-trigger btn waves-effect waves-light" type="submit" name="action">Enviar
               <i class="material-icons right">send</i>
             </button>
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+                <h4>Asistencia Confirmada</h4>
+                <p>Se a confirmado tu asistencia ,espere un momento por favor...!</p>
+              </div>
+            </div>
           </div>
         </form>
       </div>

@@ -16,4 +16,5 @@ btnRegister.addEventListener('click', () => {
     fecha_de_visita: visitDate,
   })
   sendEmail(name,dni,cellPhone,slcVisitante,visitDate);
+  document.getElementById('infoDate').reset();
 });
