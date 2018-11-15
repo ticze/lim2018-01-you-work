@@ -20,6 +20,8 @@ select {
 }
 #registro{
   background-color: #F2F2ED;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 .slider{
   margin: 20px;

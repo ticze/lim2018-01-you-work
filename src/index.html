@@ -1,86 +1,105 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Let browser know website is optimized for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/LogoMakr_7VjalF.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <title>YOU-WORK</title>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Compiled and minified CSS -->
-  <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-  <link rel="shortcut icon" href="../img/LogoMakr_7VjalF.png" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-  <title>YOU-WORK</title>
-</head>
-
-<body>
-
-  <div class="navbar-fixed">
-    <nav class="adm">
-      <div class="nav-wrapper">
-        <ul class="right hide-on-med-and-down">
-          <li>
-            <a href="../src/administracion.html" class="waves-effect waves-light btn">Administrador
-              <i class="material-icons right">assignment_ind</i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-
-  <section id="registro">
-    <div class="container">
-      <div class="row">
-        <form method="get" class="col s12" id="infoDate">
-          <div class="row">
-            <h2 class="center-align">REGíSTRATE</h2>
-            <div class="input-field col s12">
-              <input id="nombres" type="text" class="validate">
-              <label for="nombres">NOMBRE COMPLETO</label>
-            </div>
-            <div class="input-field col s12">
-              <input id="dni" type="number" class="validate">
-              <label for="dni">NÚMERO DE IDENTIFICACIÓN</label>
-            </div>
-            <div class="input-field col s12">
-              <input id="celular" type="number" class="validate">
-              <label for="celular">CELULAR</label>
-            </div>
-            <label> A QUIÉN DESEA VISITAR?</label>
-            <select class="browser-default" id="slc_vst">
-              <option value="" disabled selected>Seleccione</option>
-              <option value="l.ticze@gmail.com">Leyla Ticze</option>
-              <option value="gutierrezanicamalucero@gmail.com">Grecia Gutierrez</option>
-            </select>
-            <button id="btn-for" data-target="modal1" class="btn modal-trigger btn waves-effect waves-light" type="submit" name="action">Enviar
-              <i class="material-icons right">send</i>
-            </button>
-            <div id="modal1" class="modal">
-              <div class="modal-content">
-                <h4>Asistencia Confirmada</h4>
-                <p>Se a confirmado tu asistencia ,espere un momento por favor...!</p>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
+  <body>
+    <div class="navbar-fixed">
+      <nav class="adm">
+        <div class="nav-wrapper">
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a
+                href="../src/administracion.html"
+                class="waves-effect waves-light btn"
+                >Administrador
+                <i class="material-icons right">assignment_ind</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
-  </section>
+    <div class="container" id="registro">
+      <div class="row">
+      <form method="get" class="col s12 m12" id="infoDate">
+        <div class="col s12 m12 ">
+          <h2 class="col s12 m12 center-align">REGíSTRATE</h2>
+        </div>
+        <div class="input-field col s12">
+          <input id="nombres" type="text" class="validate" />
+          <label for="nombres">NOMBRE COMPLETO</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="dni" type="number" class="validate" />
+          <label for="dni">NÚMERO DE IDENTIFICACIÓN</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="celular" type="number" class="validate" />
+          <label for="celular">CELULAR</label>
+        </div>
+        <label> A QUIÉN DESEA VISITAR?</label>
+        <select class="browser-default" id="slc_vst">
+          <option value="" disabled selected>Seleccione</option>
+          <option value="l.ticze@gmail.com">Leyla Ticze</option>
+          <option value="gutierrezanicamalucero@gmail.com"
+            >Grecia Gutierrez</option
+          >
+        </select>
+        <button
+          id="btn-for"
+          data-target="modal1"
+          class="btn modal-trigger btn waves-effect waves-light"
+          type="submit"
+          name="action"
+        >
+          Enviar <i class="material-icons right">send</i>
+        </button>
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Asistencia Confirmada</h4>
+            <p>
+              Se a confirmado tu asistencia ,espere un momento por favor...!
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+    </div>
 
-
-  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
-  <script src="call-firebase.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-  <script src="call-materialize.js"></script>
-  <script src="index.js"></script>
-  <script src="call-mandrill.js"></script>
-</body>
-
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script src="call-firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="call-materialize.js"></script>
+    <script src="index.js"></script>
+    <script src="call-mandrill.js"></script>
+  </body>
 </html>
